@@ -29,6 +29,8 @@ namespace Machtsverheffing
         private void cleanButton_Click(object sender, RoutedEventArgs e)
         {
             numberTextBox.Text = "";
+            numberTextBox.Focus();
+
             resultTextBox.Text = "";
         }
 
@@ -47,6 +49,11 @@ namespace Machtsverheffing
             else
             { 
                 MessageBox.Show("Geef een getal in tussen 0 en 84", "Foutieve ingave");
+
+                numberTextBox.Focus();
+                numberTextBox.SelectAll();
+
+                resultTextBox.Text = "";
             }
         }
     }
